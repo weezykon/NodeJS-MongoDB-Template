@@ -45,5 +45,5 @@ npm install
 
 ## Footnotes
 
-- Created by [Weezykon](https://twitter.com/weezykon)
+- Created by [Weezykon](https://linkedin.com/in/weezykon)
 - Licensed under [MIT](https://github.com/nodejs/node-addon-api/blob/master/LICENSE.md)
