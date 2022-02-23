@@ -39,3 +39,11 @@ Or [download as a ZIP](https://github.com/weezykon/NodeJS-MongoDB-Template/archi
 ```
 npm install
 ```
+
+
+
+
+## Footnotes
+
+- Created by [Weezykon](https://twitter.com/weezykon)
+- Licensed under [MIT](https://github.com/nodejs/node-addon-api/blob/master/LICENSE.md)
