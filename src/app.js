@@ -1,9 +1,24 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const { errorHandler } = require('./middleware/error');
+const dbConnect = require('./config/db');
 
 const dotenv = require('dotenv');
 dotenv.config();
+
+// extracts the JSON object from the request
+const bodyParser = require('body-parser');
+
+// connect db
+dbConnect();
+
+// Using body parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// require routes
+const goalsRoute = require('./routes/goalsRoute');
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -15,5 +30,11 @@ app.use((req, res, next) => {
     }
     next();
 });
+
+// routes
+app.use('/api/goals', goalsRoute);
+
+// error handler
+app.use(errorHandler);
 
 module.exports = app;
